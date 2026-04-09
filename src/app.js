@@ -12,7 +12,7 @@ function evaluar() {
 
     let probabilidad;
 
-    if (ingresos > 2000 && historial === 1 && monto < ingresos * 5) {
+    if (ingresos > 2500 && historial === 1 && monto < ingresos * 4 && empleo >= 2) {
         probabilidad = 0.8;
     } else {
         probabilidad = 0.3;
