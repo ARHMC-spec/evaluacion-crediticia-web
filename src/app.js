@@ -5,10 +5,10 @@ function evaluar() {
     const empleo = parseFloat(document.getElementById("empleo").value);
     const historial = parseInt(document.getElementById("historial").value);
 
-    if (!edad || !ingresos || !monto || historial === undefined) {
-        document.getElementById("resultado").textContent = "Ingrese todos los datos correctamente";
-        return;
-    }
+    if (isNaN(edad) || isNaN(ingresos) || isNaN(monto)) {
+    document.getElementById("resultado").textContent = "Datos inválidos";
+    return;
+}
 
     let probabilidad;
 
