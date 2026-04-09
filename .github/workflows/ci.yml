@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repo
+        uses: actions/checkout@v3
+
+      - name: Validar estructura
+        run: |
+          test -f src/index.html
+          test -f src/app.js
+
+      - name: Test
+        run: echo "Proyecto validado correctamente"
